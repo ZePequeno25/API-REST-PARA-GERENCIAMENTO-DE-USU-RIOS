@@ -138,7 +138,7 @@ no cmd execute
 
 # Criar usuário (POST)
     Método: POST
-    URL: http://localhost:3000/users
+    URL: http://localhost:3000/api/users
     Body (JSON):JSON{
       "nome": "Kain Silva",
       "email": "kain@teste.com"
@@ -147,17 +147,17 @@ Esperado: 201 + objeto com id novo e status "ativo"
 
 # Listar todos (GET)
     Método: GET
-    URL: http://localhost:3000/users
+    URL: http://localhost:3000/api/users
 Esperado: 200 + array com todos os usuários (ativos e inativos)
 
 # Buscar um por ID (GET)
     Método: GET
-    URL: http://localhost:3000/users/1 (troque 1 pelo ID real)
+    URL: http://localhost:3000/api/users/1 (troque 1 pelo ID real)
 Esperado: 200 + dados do usuário ou 404 se não existir
 
 # Atualizar nome e status (PUT)
     Método: PUT
-    URL: http://localhost:3000/users/1
+    URL: http://localhost:3000/api/users/1
     Body (JSON):JSON{
       "nome": "Kain Atualizado",
       "status": "inativo"
@@ -166,7 +166,7 @@ Esperado: 200 + usuário atualizado ou mensagem de sucesso
 
 # Desativar usuário (DELETE – soft delete)
     Método: DELETE
-    URL: http://localhost:3000/users/1
+    URL: http://localhost:3000/api/users/1
     Esperado: 200 + mensagem "desativado com sucesso"
 Depois: GET /users/1 mostra o mesmo usuário, mas com "status": "inativo"
 
@@ -177,3 +177,4 @@ Ou DB Browser for SQLite (gratuito)
 Ou no terminal:Bashsqlite3 database.sqlite "SELECT * FROM usuarios;"
 
 Veja que o registro continua lá, só o status mudou.
+
