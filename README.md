@@ -174,7 +174,10 @@ Depois: GET /users/1 mostra o mesmo usuário, mas com "status": "inativo"
 Abra database.sqlite com:
 Extensão SQLite no VS Code (clique direito → Open Database)
 Ou DB Browser for SQLite (gratuito)
-Ou no terminal:Bashsqlite3 database.sqlite "SELECT * FROM usuarios;"
+Ou no terminal:
+    
+    sqlite3 database.sqlite "SELECT * FROM usuarios;"
 
 Veja que o registro continua lá, só o status mudou.
+
 
