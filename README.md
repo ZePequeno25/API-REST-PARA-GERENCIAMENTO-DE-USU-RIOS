@@ -45,16 +45,23 @@ A API deve conter os seguintes endpoints:
 
 ## Estrutura Obrigatória de Pastas
 api-usuarios/
-└── src/
-app.js
-routes/
-    user.routes.js
-controllers/
-    user.controller.js
-services/
-    user.service.js
-database/
-    db.js
+
+src/
+    
+    app.js
+    
+    routes/
+        user.routes.js
+    
+    controllers/
+        user.controller.js
+    
+    services/
+        user.service.js
+    
+    database/
+        db.js
+
 ## Responsabilidade de Cada Camada
 
 - **routes**  
@@ -120,4 +127,5 @@ Desativar usuário (soft delete → status = "inativo")
 Consultar registros salvos no banco SQLite (abrir o arquivo database.sqlite com DB Browser for SQLite, extensão SQLite no VS Code ou comando sqlite3 database.sqlite "SELECT * FROM usuarios;")
 
 O projeto deve estar funcional, organizado e seguindo exatamente a estrutura e regras definidas acima.
+
 
